@@ -42,6 +42,7 @@ if a == b:
 elif a != b:
     print(False)
 
+#2.3
 r = int(input())
 g = int(input())
 b = int(input())
@@ -129,3 +130,220 @@ if a[0]==new_massage[0]:
     print(True)
 else:
     print(False)
+
+#5.3
+a = int(input('Введите первый отрезок:'))
+b = int(input('Введите второй отрезок:'))
+if a > b:
+    print("Больший отрезок:", a, "Он длиннее другого на:", a-b)
+elif a < b:
+    print("Больший отрезок:", b, "Он длиннее другого на:", b-a)
+elif a == b:
+    print("Отрезки равны")
+
+#6.1
+a =str(input())
+if a[0]==a[-1]:
+    print(True)
+else:
+    print(False)
+
+#6.2
+a=int(input())
+if a % 2 == 0:
+    print(a**2)
+elif a % 3 == 0:
+    print(a**3)
+else:
+    print(a*100)
+
+#6.3
+a= int(input())
+b= int(input())
+if a<0 :
+    print(a+1000,b)
+elif b<0:
+    print(b+1000,a)
+elif a<0 and b<0:
+    print(False)
+elif a>0 and b>0:
+    print(True)
+ 
+#7.1
+a=str(input())
+if a and a[-1] in ["я", "и","е","ю"]:
+    print(True)
+else:
+    print(False)
+
+#7.2
+a=int(input())
+b=int(input())
+c=int(input())
+if a <= 0 or b <=0 or c<= 0:
+    print(False)
+elif a+b > c and a+c > b and b+c> a:
+    print(True)
+else:
+    print(False)
+
+#7.3
+a = int(input())
+if a % 10 == 0:
+    print(a**10)
+elif a % 10 == 1:
+    print(a % 3)
+elif a % 10 == 2:
+    print(a/2)
+elif a % 10 >= 3:
+    print(a**2)
+
+
+#8.1
+a= input("Введите пароль:")
+if len(a)<8:
+    print(False)
+elif a == "qwerty123" or "QWERTY1234":
+    print(False)
+else:
+    print(True)
+
+#8.2
+p_c_number = 777
+a = int(input("Введите первое число:"))
+b = int(input("Введите второе число:"))
+
+if (a<p_c_number and b > p_c_number):
+    print(True)
+elif(a > p_c_number and b <p_c_number):
+    print(True)
+else:
+    print(False)
+
+#8.3
+lamp_1 = 0
+lalmp_2 = 0 
+
+a = input("Какую лампочку зажечь")
+if a == "1":
+    lamp_1 = 1
+    print("Лампочка 1 зажжена")
+elif a == "2":
+    lamp_2 = 1
+    print("Лампочка 2 зажжена")
+else:
+    print("Обе лампочки не горят")
+
+#9.1
+swich_1 = False
+swich_2 = False
+a = input("Включить")
+if a == "да":
+    swich_1 = True
+    swich_2 = True
+    print(swich_1)
+    print(swich_2)
+    print("Всё включено")
+else:
+    print(swich_1)
+    print(swich_2)
+
+a=int(input())
+if a > 0 and a%2 == 0:
+    print(True ,"even")
+elif a >0 and a == 0:
+    print(True ,"odd")
+else:
+    print(False)
+
+#9.3
+a= str(input())
+if a[0] == "/":
+    print("command")
+else:
+    print("it's string")
+
+#10.1
+a=str(input())
+if len(a)==0:
+    print("None")
+elif len(a)<=5:
+    print("short")
+elif 6<=len(a)<=10:
+    print("normal")
+elif len(a) >= 10:
+    print("long")
+
+#10.2
+a=int(input())
+if a<0:
+    print(1_000_000)
+elif a==0:
+    print(2**2)
+else:
+    print(a**3)
+
+#10.3
+numder_1=10
+numder_2=100
+a=int(input())
+if numder_1<=a<=numder_2:
+    print(True)
+else:
+    print(False)
+
+#11.1
+prog_num=0
+a=int(input())
+b=int(input())
+if a < 0 and b < 0:
+    prog_num = a+b
+    print(f"Оба числа отрицательных. Сумма: {prog_num}")
+elif a >=0 and b >=0:
+    prog_num = a-b
+    print(f"Оба числа положительных Сумма: {prog_num}")
+else:
+    print(False)
+
+#11.2
+a=int(input())
+if a % 2:
+    print(a+1)
+else:
+    print(True)
+
+#11.3
+a=input()
+if len(a) > 10:
+    print(a[:5])
+else:
+    print(a)
+
+#12.1
+ru ="абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+en= "adcdefghijklmnopqrstuvwxyz"
+a= input()
+if a in ru:
+    print("rus")
+elif a in en:
+    print("eng")
+else:
+    print(None)
+
+#12.2
+pc_num =10
+a=int(input())
+if a ==pc_num or a== pc_num-1 or a== pc_num+1:
+    print(True)
+else:
+    print(False) 
+
+#12.3
+print(print('(221-13) * 2'))
+a = int(input)
+if a == 416:
+    print(True)
+elif a > 416:
+    print(">")
+elif a < 416:
+    print("<")
