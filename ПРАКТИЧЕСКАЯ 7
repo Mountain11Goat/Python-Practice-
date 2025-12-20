@@ -1,0 +1,76 @@
+
+mas = [['folder', 'coursework.doc', 'folder', 'pict.png', 'data.accdb'], ['icon.ico', 'script.js', 'index.html', 'style.css', 'prog.py'], ['my_song.mp3', 'anapa-2003.jpg', 'cs_1.6.exe', 'folder', 'cheat.txt'], ['notes.txt', 'main.py', 'word.pdf', 'cartoon.mp4', 'array.py'], ['project.psd', 'cycle.py', 'folder', 'cycle.js', 'turtle.py']]
+print("Начальный список")
+for elem in mas:
+    print(elem)
+
+print("\n Без папок с заменой data")
+for elem in mas:
+    for elem1 in elem:
+        if elem1 == 'folder':
+                elem.remove('folder')
+        if elem1 == 'data.accdb':
+             elem.remove('data.accdb')
+             elem.append('data.sql')
+print(mas)
+print("\n все файлы.py")
+py_files = [] 
+for elem in mas:
+     for elem1 in elem:
+          if elem1[-3:] == '.py':
+               py_files.append(elem1)
+print(py_files)
+print("\n все new_файлы.js")
+new_files_js = []
+for elem in mas:
+     for elem1 in elem:
+          if elem1[-3:] == '.js':
+                a = "new_"
+                elem2 = a + elem1
+                new_files_js.append(elem2)
+print(new_files_js)
+
+
+#2
+word_numb = ["ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"]
+while True:
+    n = int(input("Введите число от 0 до 9: "))
+    if n >9:
+        print("Введите число <= 9")
+        continue
+    elif n <=9:
+        for i in range(n+1):
+            print(word_numb[i])
+            i += 1
+        break
+
+#3
+bin_sy = ['11011111', '11011101', '11000111', '11011100', '11011110']
+des_sy = []
+for num in bin_sy:
+    des_num = int(num, 2)
+    des_sy.append(des_num)
+print(f"Десятичная система: {des_sy}")
+print(f"Максимальное число: {max(des_sy)}")
+print(f"Минимальное число: {min(des_sy)}")
+
+#4
+A = [[-446, 281, -80], [465, 432, -122], [13, 'error', 8]]
+
+for elem1 in A:
+    for i, elem in enumerate(elem1):
+        if isinstance(elem, str):
+            del elem1[i]
+            elem1.insert(i, 5)
+summa = 0
+for elem1 in A:        
+ for elem in elem1:
+        summa += elem
+print(summa)
+
+#5
+matrix = [[1,2,3], [3,2,5], [6,7,8]]
+summa = 0
+summa = matrix[0][0] + matrix[1][1] + matrix[2][2] 
+print(summa)
+
