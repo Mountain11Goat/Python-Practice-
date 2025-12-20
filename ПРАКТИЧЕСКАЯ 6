@@ -1,0 +1,68 @@
+#1
+matrix=[[1,2,3],[4,5,6],[7,8,9]]
+print("matrix:")
+for elem1 in matrix:
+    print(elem1)
+print("нечетные числа martix")
+for elem2 in matrix[0]:
+ if elem2 % 2 != 0:
+    print(elem2)
+for elem2 in matrix[1]:
+ if elem2 % 2 != 0:
+    print(elem2)
+for elem2 in matrix[2]:
+  if elem2 % 2 != 0:
+    print(elem2)
+d=0
+for elem2 in matrix[0]:
+ if elem2 % 2 ==0:
+    d+=1
+for elem2 in matrix[1]:
+ if elem2 % 2 ==0:
+    d+=1
+for elem2 in matrix[2]:
+ if elem2 % 2 ==0:
+    d+=1
+    print (f"кол-во чётных: {d}")
+
+#2
+matrix_1=[[2,4,3,6],[5,7,1,5]]
+matrix_2=[[2,9,0,2],[3,4,7,6]]
+
+answer_matrix = [[0]* len(matrix_1[0]) for c in range(len(matrix_1))]
+for i in range(len(matrix_1)):
+    for j in range(len(matrix_1[0])):
+        answer_matrix[i][j] = matrix_1[i][j] * matrix_2[i][j]
+print("Результат умножения:")
+for elem in answer_matrix:
+    print(elem)
+for i in range(len(matrix_1)):
+        summ= sum(answer_matrix[i])
+        print(f"{answer_matrix[i]} сумма строки {summ}")
+
+#3
+fruits = [['Banana', 'apple'],['apricot', 'Avocado'], ['lime', 'lemon'], ['Mango', 'grapes']]
+for elem1 in fruits:
+    for elem2 in elem1:
+        if elem2[0].isupper():
+            print(elem2)
+
+#4
+random_elements = [['toy', 'bee', 'cheese', 'ear'], [False, 'word', '0110110', 10],['happiness', '(╯'')╯', 'luck', None], ['car', '<- code ->', 4.7, True]]
+for elem1 in random_elements:
+    for i, elem2 in enumerate(elem1):
+     if i==1:
+          print(f"Индекс:{i}, Элемент:{elem2}")   
+#5
+a=int(input("Введите кол-во строк:"))
+b=int(input("Введите кол-во столбцов:"))
+s=[]
+for i in range(a):
+ c=[]
+ for n in range(b):
+     d=int(input(f"Введите значение элемента[{i}][{n}]:"))
+     c.append(d)
+ s.append(c)
+print("Ваш двумерный массив:")
+for elem1 in s:
+    print(elem1)
