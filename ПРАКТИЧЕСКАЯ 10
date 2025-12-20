@@ -1,0 +1,77 @@
+#1
+def upper(t = str):
+    zaglavnie = ""
+    for bukva in t:
+        if bukva.isupper() == True:
+            zaglavnie += bukva
+    return zaglavnie
+print(upper('PriVet'))
+
+#2
+def punct(txt = str):
+    summa = 0
+    for i in txt:
+        if i == "!" or i == "?" or i == "." or i == "," or i == "(" or i ==")":
+            summa += 1
+    return summa
+print(punct('(Как дела?)'))
+
+#3
+def create_cube(x = int, y = int):
+    a = "
+    for i in range(y):
+        for j in range(x):
+            print("*", end = "")
+        print()
+    return a
+print(create_cube(5,3))
+
+#4
+def double(t = str):
+    a = ""
+    for bykva in t:
+        print(bykva*2, end = "")
+    return a
+print(double('строка'))
+
+#5
+def Constructor(d = int, p = int, m = int, t = int):
+    a = min(d//72, p//4, m//2, t//7)
+    return a
+print(Constructor(144,8,4,14))
+print(Constructor(10000,16,6,2))
+
+#6
+def create_list(x, y = 0):
+    a = []
+    for i in range(x):
+        a.append(y)
+    return a
+print(create_list(5,3))
+print(create_list(3))
+
+#7
+def custom_filter(s):
+    summa = 0
+    for elem in s:
+        if isinstance(elem, int):
+            if elem % 7 == 0:
+                summa += elem
+    print(f"сумма:{summa}")
+    if summa < 83:
+        return True
+    else:
+        return False
+    
+print(custom_filter([7, 10.5, 'txt', 14, 2, 56]))
+
+#8
+def square(x, y):
+    for i in range(y):
+        for j in range(x):
+         print("\n _")
+         print(f"\n|{i+1}|", end = "")
+         print("\n \n ‾", end="")
+    return ""
+print(square(2,3))
+ 
