@@ -1,0 +1,10 @@
+robot_name = input("Введите имя робота: ")
+planet_name = input("Введите название планеты: ")
+robot_speed = int(input("Введите скорость робота: "))
+planet_diameter = int(input("Введите диаметр планеты: "))
+def time_to_travel_around_planet(robot_speed, planet_diameter):
+    C = 3.14159*planet_diameter
+    t = C / robot_speed
+    return t
+calculation_1 = time_to_travel_around_planet(robot_speed, planet_diameter)
+print(f"Роботу {robot_name} необходимо {calculation_1:.2f} часов, чтобы объехать вокруг планеты {planet_name}")
