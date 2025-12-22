@@ -1,0 +1,12 @@
+#1
+x = lambda a,b: a*b
+print(x(2,3))
+
+#2
+n = int(input('Всего чисел будет: '))
+list1 = []
+for i in range(n):
+    a = int(input())
+    list1.append(a)
+sorted_list = list(filter(lambda a: (a % 3 == 0 and a % 5 == 0), list1))
+print(sorted_list)
