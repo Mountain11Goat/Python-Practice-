@@ -1,0 +1,39 @@
+#1
+while True:
+    a = input('ведите число:')
+    if a.isdigit():
+        x = int(a)
+        for i in range(x+1):
+            print(i, end="")
+        print()
+        break
+    else:
+        print(f"{a} - не число .Повторите ввод .")
+
+
+#2
+any_list = [4, 3.2, 16, 9, 13.5, 67]
+print("Выходные данные")
+for index, item in enumerate(any_list):
+    try:
+        if index ==0:
+            print(f"Делится на 0! Элемент:{item}")
+        else:
+            result = item / index
+            print(f"{item}/{index}={result}")
+    except Exception as e:
+        print(f"Произошла ошибка: {e}")
+
+#3
+a = []
+b = 0
+while b < 5:
+   
+    try:
+        c = input('>>>')
+        num = int(c)
+        a.append(num)
+        b += 1
+    except ValueError:
+        continue
+print(a)
